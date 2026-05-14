@@ -1,121 +1,137 @@
 <!doctype html>
 <html lang="ja">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>自己紹介</title>
     <style>
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-      body {
-        letter-spacing: 10px;
-        color: rgb(95, 92, 92);
-        width: 100vw;
-        height: 100vh;
-        background: linear-gradient(45deg, #f5b090, #fcd7a1, #fff9b1, #a5d4ad, #a3bce2, #a59aca, #cfa7cd);
-        position: relative;
-      }
+        body {
+            letter-spacing: 10px;
+            color: rgb(95, 92, 92);
+            width: 100vw;
+            height: 100vh;
+            background: linear-gradient(45deg, #f5b090, #fcd7a1, #fff9b1, #a5d4ad, #a3bce2, #a59aca, #cfa7cd) 0 / 200% 100%;
+            position: relative;
+            animation: bg-gradient 3s linear infinite alternate;
+        }
 
-      .container {
-        width: calc(100vw - 120px);
-        height: calc(100vh - 120px);
-        background-color: #fff8f8;
-        position: absolute;
-        top: 60px;
-        right: 60px;
-        bottom: 60px;
-        left: 60px;
-        overflow: hidden;
-        border-radius: 30px;
-      }
+        @keyframes bg-gradient {
+            0% {
+                background-position: 0 0;
+            }
 
-      .container_inner {
-        padding: 50px;
-        overflow-y: auto;
-        height: 100%;
-        position: relative;
-      }
+            100% {
+                background-position: 100% 0;
+            }
+        }
 
-      .img {
-        width: 300px;
-        position: fixed;
-        margin: 60px 30px 0px 60px;
-      }
+        .container {
+            width: calc(100vw - 80px);
+            height: calc(100vh - 80px);
+            background-color: #fff8f8;
+            position: absolute;
+            top: 40px;
+            right: 40px;
+            bottom: 40px;
+            left: 40px;
+            overflow: hidden;
+            border-radius: 20px;
+        }
 
-      .img p {
-        text-align: center;
-      }
+        .container_inner {
+            padding: 50px;
+            overflow-y: auto;
+            height: 100%;
+            position: relative;
+        }
 
-      .img img {
-        width: 300px;
-        height: 300px;
-        border-radius: 30px;
-      }
+        .img {
+            width: 300px;
+            position: fixed;
+            margin: 60px 30px 0px 60px;
+        }
 
-      .container_inner .txt {
-        width: calc(100% - 450px);
-        padding-bottom: 40px;
-        position: absolute;
-        top: 80px;
-        right: 40px;
-      }
+        .img p {
+            text-align: center;
+        }
 
-      .container_inner .txt h1 {
-        width: fit-content;
-        border-bottom: 10px rgb(95, 92, 92) solid;
-        font-size: 33px;
-        margin-bottom: 40px;
-      }
+        .img img {
+            width: 300px;
+            height: 300px;
+            border-radius: 30px;
+        }
 
-      .container_inner .txt h2 {
-        font-size: 24px;
-        margin-bottom: 20px;
-      }
+        .container_inner .txt {
+            width: calc(100% - 450px);
+            padding-bottom: 40px;
+            position: absolute;
+            top: 60px;
+            right: 40px;
+        }
 
-      .container_inner .txt p {
-        font-size: 24px;
-        font-weight: bold;
-        line-height: 1.8;
-      }
+        .container_inner .txt h1 {
+            width: fit-content;
+            border-bottom: 10px rgb(95, 92, 92) solid;
+            font-size: 33px;
+            margin-bottom: 40px;
+        }
 
-      .container_inner .txt h2:last-of-type {
-        margin-bottom: 50px;
-      }
+        .container_inner .txt h2 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            padding-left: 140px;
+            text-indent: -140px;
+            text-align: justify;
+        }
 
-      .container_inner .txt h2 .colon {
-        font-size: 22px;
-        vertical-align: 4px;
-      }
+        .container_inner .txt p {
+            font-size: 24px;
+            font-weight: bold;
+            line-height: 1.8;
+        }
 
-      .container_inner .txt p.greeting {
-        text-align: right;
-        margin-top: 30px;
-        padding-bottom: 40px;
-      }
+        .container_inner .txt h2:last-of-type {
+            margin-bottom: 50px;
+        }
+
+        .container_inner .txt h2 .colon {
+            font-size: 22px;
+            vertical-align: 4px;
+        }
+
+        .container_inner .txt p.greeting {
+            text-align: right;
+            margin-top: 30px;
+            padding-bottom: 40px;
+        }
     </style>
-  </head>
+</head>
 
-  <body>
+<body>
     <div class="container">
-      <div class="img">
-        <p><img src="https://placehold.jp/3d4070/ffffff/300x300.png" alt="" /></p>
-      </div>
-      <div class="container_inner">
-        <div class="txt">
-          <h1>プロフィール</h1>
-          <h2>名　前<span class="colon">：</span>村上英輝</h2>
-          <h2>年　齢<span class="colon">：</span>46歳</h2>
-          <h2>居住地<span class="colon">：</span>奈良市</h2>
-          <h2>趣　味<span class="colon">：</span>読書・散歩・買い物・古いアニメを見る</h2>
-          <h1>好きなもの</h1>
-          <p>一人で過ごす時間が好きで、平日・休日問わず趣味や勉強などやりたいことをして生活しています。最近、少し前のデジタル一眼レフを買ってよく撮影しています。</p>
-          <p class="greeting">よろしくお願いします。</p>
+        <div class="img">
+            <p><img src="me.jpg" alt="" /></p>
         </div>
-      </div>
+        <div class="container_inner">
+            <div class="txt">
+                <h1>プロフィール</h1>
+                <h2>名　前<span class="colon">：</span>村上英輝</h2>
+                <h2>年　齢<span class="colon">：</span>46歳</h2>
+                <h2>居住地<span class="colon">：</span>奈良市</h2>
+                <h2>趣　味<span class="colon">：</span>読書・散歩・買い物・古いアニメを見る</h2>
+                <h1>好きなもの</h1>
+                <p>一人で過ごす時間が好きで、平日・休日問わず趣味や勉強などやりたいことをして生活しています。最近、少し前のデジタル一眼レフを買ってよく撮影しています。</p>
+                <p class="greeting">よろしくお願いします。</p>
+            </div>
+        </div>
     </div>
-  </body>
+</body>
+
 </html>
